@@ -28,7 +28,7 @@ function geoLocationReady(){
 			source: function(request,response){
 			    $.ajax({
 				dataType: "jsonp",
-				url: "http://autocomplete.wunderground.com/aq?query="+$("#searchBar").val(),
+				url: "https://autocomplete.wunderground.com/aq?query="+$("#searchBar").val(),
 				jsonp: 'cb',
 
 				success: function(data){
