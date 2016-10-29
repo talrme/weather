@@ -146,7 +146,7 @@ function retreiveMainInfo(location,id){
 
 		$.ajax({
 			dataType: "json",
-			url: 'http://api.wunderground.com/api/2ee32ccf55d24c3e/conditions/q/'+location+'.json',
+			url: 'https://api.wunderground.com/api/2ee32ccf55d24c3e/conditions/q/'+location+'.json',
 			//data: data,
 			success: function(data){
 				console.log("Data for "+id+":");
@@ -201,7 +201,7 @@ function loadCityDash(postHash){
 
 		$.ajax({
 			dataType: "json",
-			url: 'http://api.wunderground.com/api/2ee32ccf55d24c3e/geolookup/q/'+postHash+'.json',
+			url: 'https://api.wunderground.com/api/2ee32ccf55d24c3e/geolookup/q/'+postHash+'.json',
 			//data: data,
 			success: function(data){
 				console.log("Geo Lookup Data for "+postHash+":");
@@ -219,7 +219,7 @@ function loadCityDash(postHash){
 function loadCurrentCityName(){
 	$.ajax({
 			dataType: "json",
-			url: 'http://api.wunderground.com/api/2ee32ccf55d24c3e/geolookup/q/autoip.json',
+			url: 'https://api.wunderground.com/api/2ee32ccf55d24c3e/geolookup/q/autoip.json',
 			//data: data,
 			success: function(data){
 				var cityName = data.location.city;
@@ -245,7 +245,7 @@ function retrieve10DayForecast(city){
 	} else{
 
 	
-		URL = "http://api.wunderground.com/api/2ee32ccf55d24c3e/forecast10day/q/"+city+".json";
+		URL = "https://api.wunderground.com/api/2ee32ccf55d24c3e/forecast10day/q/"+city+".json";
 
 		$.ajax({
 			dataType: "json",
@@ -308,7 +308,7 @@ function getHourlyForecast(postHash){
 
 	else{
 
-		URL = 'http://api.wunderground.com/api/2ee32ccf55d24c3e/hourly/q/'+postHash+'.json';
+		URL = 'https://api.wunderground.com/api/2ee32ccf55d24c3e/hourly/q/'+postHash+'.json';
 
 		$.ajax({
 			dataType: "json",
